@@ -1,3 +1,5 @@
+import os
+import sys
 from pathlib import Path
 import os
 
@@ -73,3 +75,29 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Vercel Deployment Settings
+import os
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
+
+# Handle static files for Vercel
+if os.environ.get('VERCEL'):
+    STATICFILES_DIRS = [BASE_DIR / 'static']
+    STATIC_ROOT = BASE_DIR / 'staticfiles'
+    STATIC_URL = '/static/'
+
+# Vercel deployment settings
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', 'localhost', '127.0.0.1']
+DEBUG = False
+
+# Static files for Vercel
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
+
+# Ensure static files work on Vercel
+if os.environ.get('VERCEL'):
+    STATIC_ROOT = BASE_DIR / 'staticfiles'
+    STATIC_URL = '/static/'
