@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- ===== HERO SECTION ===== -->
+<section class="hero">
+    <h1>Hi, I'm <span class="highlight">VASHISHTA REDDY M</span></h1>
+    <div class="title">Data Scientist • Computer Science Graduate • AI/ML Enthusiast</div>
+    <p class="tagline">
+        Data Science professional with a strong Computer Science background, passionate about extracting insights from data, 
+        building intelligent systems, and solving complex real-world problems. Skilled in machine learning, statistical analysis, 
+        and deploying AI solutions at scale. Always eager to learn, innovate, and collaborate on impactful data-driven projects.
+    </p>
+    <div class="hero-buttons">
+        <a href="#about" class="btn btn-primary"><i class="fas fa-user"></i> About Me</a>
+        <a href="#projects" class="btn btn-secondary"><i class="fas fa-rocket"></i> Projects</a>
+        <a href="#certifications" class="btn btn-secondary"><i class="fas fa-certificate"></i> Certifications</a>
+        <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact</a>
+    </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <div class="about-grid">
+        <div class="profile-photo">
+            <img src="{% static 'images/photo2.jpg.jpeg' %}" alt="VASHISHTA REDDY M" class="profile-image" />
+        </div>
+        <div class="about-text">
+            <p>
+                I'm passionate about leveraging AI and machine learning to solve real-world problems. 
+                With a strong foundation in both theory and practical implementation, I bridge the gap 
+                between cutting-edge AI research and production systems.
+            </p>
+            <p>
+                My journey spans across Python development, cloud infrastructure with AWS, and building 
+                full-stack applications with React. I'm constantly learning new technologies and sharing 
+                knowledge with the community.
+            </p>
+            <p>
+                When I'm not coding, you'll find me exploring the latest in AI/ML research, contributing 
+                to open-source projects, or mentoring aspiring developers.
+            </p>
+            <div class="fact-boxes">
+                <div class="fact">
+                    <h3><i class="fas fa-briefcase" style="color: #3b82f6"></i> Experience</h3>
+                    <p>Building AI/ML solutions and full-stack applications with focus on real-world impact</p>
+                </div>
+                <div class="fact">
+                    <h3><i class="fas fa-graduation-cap" style="color: #8b5cf6"></i> Education</h3>
+                    <p>B.Tech in Computer Science Engineering (AI) from KL University</p>
+                </div>
+                <div class="fact">
+                    <h3><i class="fas fa-heart" style="color: #ec4899"></i> Passion</h3>
+                    <p>Creating innovative solutions that make a tangible difference in people's lives</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SKILLS SECTION ===== -->
+<section id="skills" class="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
+        <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
+        <div class="skill-item"><i class="fab fa-react"></i><span>React</span></div>
+        <div class="skill-item"><i class="fab fa-django"></i><span>Django</span></div>
+        <div class="skill-item"><i class="fas fa-flask"></i><span>Flask</span></div>
+        <div class="skill-item"><i class="fab fa-aws"></i><span>AWS</span></div>
+        <div class="skill-item"><i class="fas fa-database"></i><span>SQL</span></div>
+        <div class="skill-item"><i class="fas fa-eye"></i><span>OpenCV</span></div>
+        <div class="skill-item"><i class="fas fa-calculator"></i><span>NumPy</span></div>
+        <div class="skill-item"><i class="fas fa-table"></i><span>Pandas</span></div>
+    </div>
+</section>
+
+<!-- ===== PROJECTS SECTION ===== -->
+<section id="projects" class="projects">
+    <h2>Future Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <div class="project-header">
+                <h3><i class="fas fa-code" style="color: #3b82f6"></i> AI-Powered Chatbot</h3>
+                <span class="project-status">In Development</span>
+            </div>
+            <p class="project-description">Building an intelligent chatbot using NLP and deep learning for customer service automation.</p>
+            <div class="project-tech">
+                <i class="fas fa-tools"></i>
+                <span>Python, TensorFlow, FastAPI</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h3><i class="fas fa-code" style="color: #3b82f6"></i> Cloud Cost Optimizer</h3>
+                <span class="project-status">Planning Phase</span>
+            </div>
+            <p class="project-description">AWS-based solution to monitor and optimize cloud infrastructure costs using machine learning.</p>
+            <div class="project-tech">
+                <i class="fas fa-tools"></i>
+                <span>AWS, Python, Lambda</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h3><i class="fas fa-code" style="color: #3b82f6"></i> Real-Time Analytics Dashboard</h3>
+                <span class="project-status">Coming Soon</span>
+            </div>
+            <p class="project-description">Interactive dashboard for real-time data visualization and business intelligence.</p>
+            <div class="project-tech">
+                <i class="fas fa-tools"></i>
+                <span>React, Django, WebSockets</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CERTIFICATIONS SECTION ===== -->
+<section id="certifications" class="certifications">
+    <h2>Certifications</h2>
+    <div class="certifications-grid">
+        <div class="cert-card">
+            <div class="cert-icon"><i class="fab fa-aws"></i></div>
+            <div class="cert-info">
+                <h3>AWS Certified Cloud Practitioner</h3>
+                <p>Amazon Web Services</p>
+                <span class="cert-year">2024</span>
+                <p class="cert-description">Cloud fundamentals and AWS services</p>
+                <a href="https://www.credly.com/badges/2ea3df23-0daf-43d5-9d2f-eea77718f185/public_url" target="_blank" class="btn-cert-view">
+                    <i class="fas fa-external-link-alt"></i> View Certificate
+                </a>
+            </div>
+        </div>
+        <div class="cert-card">
+            <div class="cert-icon"><i class="fas fa-database"></i></div>
+            <div class="cert-info">
+                <h3>Oracle Certified Foundation Associate</h3>
+                <p>Oracle</p>
+                <span class="cert-year">2026</span>
+                <p class="cert-description">Oracle database and cloud foundation</p>
+                <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=5635020EDC483C9528EF72EA3A2C321F5BA28E38E1F5950489F7785947D66E58" target="_blank" class="btn-cert-view">
+                    <i class="fas fa-external-link-alt"></i> View Certificate
+                </a>
+            </div>
+        </div>
+        <div class="cert-card">
+            <div class="cert-icon"><i class="fab fa-linux"></i></div>
+            <div class="cert-info">
+                <h3>Red Hat Certified Developer</h3>
+                <p>Red Hat</p>
+                <span class="cert-year">2023</span>
+                <p class="cert-description">Enterprise application development</p>
+                <a href="https://www.credly.com/badges/d77b8e27-4e94-48fb-b67c-0f13becb4dc9/public_url" target="_blank" class="btn-cert-view">
+                    <i class="fas fa-external-link-alt"></i> View Certificate
+                </a>
+            </div>
+        </div>
+        <div class="cert-card">
+            <div class="cert-icon"><i class="fas fa-robot"></i></div>
+            <div class="cert-info">
+                <h3>Automation Anywhere Certified</h3>
+                <p>Automation Anywhere</p>
+                <span class="cert-year">2025</span>
+                <p class="cert-description">RPA and automation solutions</p>
+                <a href="https://certificates.automationanywhere.com/profile/mudalavashishtareddy669253/wallet" target="_blank" class="btn-cert-view">
+                    <i class="fas fa-external-link-alt"></i> View Certificate
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section id="contact" class="contact">
+    <h2>Let's Connect</h2>
+    <p class="contact-text">Have a project in mind? Let's talk! Feel free to reach out through any of these channels.</p>
+    <div class="social-links">
+        <a href="https://github.com/vashishta16" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github fa-2x"></i></a>
+        <a href="https://linkedin.com/in/mudiyala-vashishta-reddy-099814285" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://x.com/vashishta_16" target="_blank" class="social-icon" title="Twitter"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="mailto:vashishtareddym16@gmail.com" class="social-icon" title="Email"><i class="fas fa-envelope fa-2x"></i></a>
+    </div>
+    <p class="footer-text">© 2026 VASHISHTA REDDY M. Built with Django.</p>
+</section>
+{% endblock %}
